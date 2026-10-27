@@ -1,0 +1,34 @@
+{
+  "name": "thinkr/gateways-sdk",
+  "description": "Unified and Agnostic Payment Gateways SDK for PHP 8.2 (Asaas and Pagar.me)",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^8.2",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "GatewaysSdk\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "GatewaysSdk\\Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {}
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test:unit": "vendor/bin/phpunit tests/Unit",
+    "test:integration": "vendor/bin/phpunit tests/Integration"
+  }
+}

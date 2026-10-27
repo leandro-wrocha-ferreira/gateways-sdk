@@ -1,0 +1,17 @@
+{
+  "git-safety-gate": {
+    "enabled": true,
+    "PreToolUse": [
+      {
+        "matcher": "run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 scripts/git-guard.py 2>/dev/null || python3 .agents/scripts/git-guard.py",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}
